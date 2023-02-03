@@ -9,26 +9,49 @@ import { Container } from "./Styled";
 import { Pagination, Navigation, HashNavigation } from "swiper";
 
 export default function Slide() {
-    return (
-        <Container>
-            <Swiper
-                spaceBetween={30}
-                hashNavigation={{
-                    watchState: true,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                width={265}
-                navigation={true}
-                modules={[Pagination, Navigation, HashNavigation]}
-                className="mySwiper"
-            >
-                <SwiperSlide data-hash="slide1">Slide 1</SwiperSlide>
-                <SwiperSlide data-hash="slide2">Slide 2</SwiperSlide>
-                <SwiperSlide data-hash="slide3">Slide 3</SwiperSlide>
-                <SwiperSlide data-hash="slide4">Slide 4</SwiperSlide>
-            </Swiper>
-        </Container>
-    );
+  return (
+    <Container>
+      <h2>Links</h2>
+      <Swiper
+        spaceBetween={30}
+        hashNavigation={{
+          watchState: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        slidesPerView={1.5}
+        width={440}
+        navigation={true}
+        modules={[Pagination, Navigation, HashNavigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide data-hash="slide1">
+          <img src="/card1.png" alt="" />
+          <div className="content">
+            <h3>Modelo internacional</h3>
+            <p>Musa Fitness</p>
+            <a href="#">Adquirir</a>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide data-hash="slide2">
+          <img src="/card2.png" alt="" />
+          <div className="content">
+            <h3>Modelo internacional</h3>
+            <p>Musa Fitness</p>
+            <a href="#">Adquirir</a>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide data-hash="slide3">
+          <img src="/card3.png" alt="" />
+          <div className="content">
+            <h3>Modelo internacional</h3>
+            <p>Musa Fitness</p>
+            <a href="#">Adquirir</a>
+          </div>
+        </SwiperSlide>
+        {/* <SwiperSlide data-hash="slide4">Slide 4</SwiperSlide> */}
+      </Swiper>
+    </Container>
+  );
 }

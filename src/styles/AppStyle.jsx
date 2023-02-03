@@ -6,8 +6,9 @@ export const AppStyle = styled.div`
   flex-direction: column;
   max-width: 655px;
   height: 800px;
+  margin-top: 100px;
+  margin-bottom: 130px;
   .profile {
-    padding-top: 100px;
     display: flex;
     justify-content: space-between;
     .profileInfo {

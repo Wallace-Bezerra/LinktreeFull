@@ -20,6 +20,7 @@ export const AppStyle = styled.div`
           font-size: 40px;
           line-height: 48px;
           color: white;
+          margin-bottom: 7px;
         }
         p {
           max-width: 226px;

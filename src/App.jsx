@@ -1,4 +1,5 @@
 import { MiniCard } from "./Components/MiniCard/MiniCard";
+import Slide from "./Components/MiniCard/Slide/Slide";
 import { AppStyle } from "./styles/AppStyle";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <p>Rafaela Monteiro influenciadora digital mais famosa do insta!</p>
         </div>
       </div>
+      <Slide />
     </AppStyle>
   );
 }

@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap'); */
 
 *{
   margin: 0;
@@ -10,8 +9,11 @@ export const GlobalStyle = createGlobalStyle`
   text-decoration: none;
   list-style: none;
   font-family: 'Lato', sans-serif;
+  color: inherit;
 }
 body{
-  background-color: #FF0054;
+  /* background-color: #FF0054; */
+  transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: ${({ theme }) => theme.bg}
 }
 `;

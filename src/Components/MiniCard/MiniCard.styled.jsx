@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const MiniCardStyled = styled.div`
-  background: #ffffff;
+  /* background: ${(props) => props.isOpen ? "#222" : "#fff"}; */
+  background-color: #fff;
   border-radius: 5px;
   max-width: 333px;
   width: 100%;
@@ -15,7 +16,7 @@ export const MiniCardStyled = styled.div`
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: #ff0054;
+    color: ${({ theme }) => theme.bg};
   }
   img {
     width: 52px;

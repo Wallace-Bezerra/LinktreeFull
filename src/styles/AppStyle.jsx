@@ -5,7 +5,8 @@ export const AppStyle = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 655px;
-  height: 800px;
+  position: relative;
+  /* height: 800px; */
   margin-top: 100px;
   margin-bottom: 130px;
   .profile {
@@ -28,7 +29,8 @@ export const AppStyle = styled.div`
           font-weight: 500;
           font-size: 16px;
           line-height: 19px;
-          color: #fee1e1;
+          /* color: #fee1e1; */
+          color: ${({ theme }) => theme.textColor};
         }
       }
       .miniCards {
@@ -39,7 +41,7 @@ export const AppStyle = styled.div`
     }
     .profileImage {
       img {
-        border: 6px solid #ffeaea;
+        border: 6px solid ${({ theme }) => theme.textColor};
         border-radius: 30px;
         max-width: 240px;
         width: 100%;
@@ -50,7 +52,7 @@ export const AppStyle = styled.div`
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
-        color: #fee1e1;
+        color: ${({ theme }) => theme.textColor};
       }
     }
   }

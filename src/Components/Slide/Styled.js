@@ -39,7 +39,7 @@ export const Container = styled.div`
     left: 87px;
     &::after {
       content: "";
-      width: 24.02px;
+      width: 25px;
       height: 18.69px;
       /* background-color:blue; */
       display: flex;
@@ -82,32 +82,32 @@ export const Container = styled.div`
     padding-left: 18px;
     padding-top: 23px;
     padding-bottom: 18px;
+    color: ${({ theme }) => theme.bg};
     h3 {
       font-weight: 600;
       font-size: 20px;
       line-height: 24px;
-      color: #ff0054;
       margin-bottom: 7px;
     }
     p {
       font-weight: 300;
       font-size: 20px;
       line-height: 24px;
-      color: #ff0054;
+      /* color: #ff0054; */
       margin-bottom: 30px;
     }
     a {
       font-weight: 500;
       font-size: 20px;
       line-height: 24px;
-      color: #ff0054;
+      /* color: #ff0054; */
     }
   }
 
   .swiper-pagination-bullet {
     width: 13px;
     height: 13px;
-    background-color: #feb3b3;
+    background-color: ${({ theme }) => theme.auxiliar};
     opacity: 1;
   }
   .swiper-pagination-bullet-active {

@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Container } from "./Styled";
 // import required modules
-import { Pagination, Navigation, HashNavigation } from "swiper";
+import { Pagination, Navigation } from "swiper";
 
 export default function Slide() {
   return (
@@ -14,19 +14,16 @@ export default function Slide() {
       <h2>Links</h2>
       <Swiper
         spaceBetween={30}
-        hashNavigation={{
-          watchState: true,
-        }}
         pagination={{
           clickable: true,
         }}
         slidesPerView={1.5}
         width={440}
         navigation={true}
-        modules={[Pagination, Navigation, HashNavigation]}
+        modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide data-hash="slide1">
+        <SwiperSlide >
           <img src="/card1.png" alt="" />
           <div className="content">
             <h3>Modelo internacional</h3>
@@ -34,7 +31,7 @@ export default function Slide() {
             <a href="#">Adquirir</a>
           </div>
         </SwiperSlide>
-        <SwiperSlide data-hash="slide2">
+        <SwiperSlide>
           <img src="/card2.png" alt="" />
           <div className="content">
             <h3>Modelo internacional</h3>
@@ -42,7 +39,7 @@ export default function Slide() {
             <a href="#">Adquirir</a>
           </div>
         </SwiperSlide>
-        <SwiperSlide data-hash="slide3">
+        <SwiperSlide>
           <img src="/card3.png" alt="" />
           <div className="content">
             <h3>Modelo internacional</h3>
@@ -50,7 +47,6 @@ export default function Slide() {
             <a href="#">Adquirir</a>
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide data-hash="slide4">Slide 4</SwiperSlide> */}
       </Swiper>
     </Container>
   );

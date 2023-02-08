@@ -6,11 +6,11 @@ export const AppStyle = styled.div`
   flex-direction: column;
   max-width: 655px;
   position: relative;
-  /* height: 800px; */
   margin-top: 100px;
   margin-bottom: 130px;
   .profile {
-    display: flex;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
     justify-content: space-between;
     .profileInfo {
       max-width: 333px;
@@ -33,13 +33,16 @@ export const AppStyle = styled.div`
           color: ${({ theme }) => theme.textColor};
         }
       }
-      .miniCards {
-        display: flex;
-        flex-direction: column;
-        gap: 23px;
-      }
+    }
+    .miniCards {
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
     }
     .profileImage {
+      grid-row: 1/3;
+      grid-column: 2;
+      justify-self: end;
       img {
         border: 6px solid ${({ theme }) => theme.textColor};
         border-radius: 30px;
@@ -53,6 +56,18 @@ export const AppStyle = styled.div`
         font-size: 16px;
         line-height: 19px;
         color: ${({ theme }) => theme.textColor};
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    max-width: 680px;
+    padding-left: 30px;
+    .profile {
+      .profileImage {
+        grid-row: 2/3;
+        grid-column: 1;
+        justify-self: start;
+        margin-bottom: 40px;
       }
     }
   }

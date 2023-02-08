@@ -117,9 +117,10 @@ export const Container = styled.div`
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    width: 100%;
+    width: fit-content;
     height: 20px;
     top: -50px;
-    left: 260px;
+    right: 20px;
+    left: initial;
   }
 `;

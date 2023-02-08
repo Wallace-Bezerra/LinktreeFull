@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
   color: inherit;
 }
 body{
-  /* background-color: #FF0054; */
   transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
   background-color: ${({ theme }) => theme.bg}
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { MiniCard } from "./Components/MiniCard/MiniCard";
 import Slide from "./Components/Slide/Slide";
@@ -8,13 +8,16 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { Themes } from "./styles/Themes";
 
 function App() {
-  // const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState("primary");
+  const [theme, setTheme] = useState(
+    localStorage.getItem("themeColor") || "primary"
+  );
   const toggle = () => {
-    setTheme(theme === "primary" ? "secondary" : "primary");
-    localStorage.setItem("themeColor", theme);
-    console.log(theme);
+    setTheme((prev) => (prev === "primary" ? "secondary" : "primary"));
   };
+
+  useEffect(() => {
+    localStorage.setItem("themeColor", theme);
+  }, [theme]);
 
   return (
     <ThemeProvider theme={Themes[theme]}>

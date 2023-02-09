@@ -10,7 +10,6 @@ export const AppStyle = styled.div`
   margin-bottom: 130px;
   .profile {
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
     justify-content: space-between;
     .profileInfo {
       max-width: 333px;

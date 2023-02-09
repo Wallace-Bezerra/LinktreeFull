@@ -13,7 +13,6 @@ export const Container = styled.div`
     height: 100%;
     overflow-x: clip;
     overflow-y: visible;
-    /* height: 300px; */
   }
 
   .swiper-slide {
@@ -26,7 +25,6 @@ export const Container = styled.div`
     flex-direction: column;
   }
   .swiper-button-next {
-    /* background-color:red; */
     width: 55px;
     height: 55px;
     display: flex;
@@ -41,7 +39,6 @@ export const Container = styled.div`
       content: "";
       width: 25px;
       height: 18.69px;
-      /* background-color:blue; */
       display: flex;
       align-items: center;
       background-image: url("/arrowRight.svg");
@@ -93,14 +90,12 @@ export const Container = styled.div`
       font-weight: 300;
       font-size: 20px;
       line-height: 24px;
-      /* color: #ff0054; */
       margin-bottom: 30px;
     }
     a {
       font-weight: 500;
       font-size: 20px;
       line-height: 24px;
-      /* color: #ff0054; */
     }
   }
 

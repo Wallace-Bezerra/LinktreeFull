@@ -22,6 +22,7 @@ export const Container = styled.div`
     height: 330px;
     border-radius: 22px;
     display: flex;
+    /* cursor: grab; */
     flex-direction: column;
   }
   .swiper-button-next {
@@ -82,6 +83,15 @@ export const Container = styled.div`
     padding-bottom: 18px;
     color: ${({ theme }) => theme.bg};
 
+    .title{
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 12px;
+      h3{
+        margin: 0px;
+      }
+    }
     h3 {
       font-weight: 600;
       font-size: 20px;

@@ -72,7 +72,8 @@ export const Container = styled.div`
     height: 180px;
     object-fit: cover;
     object-position: bottom;
-    border-radius: 24px 24px 0 0;
+    border-radius: 21px 21px 0 0;
+    cursor: pointer;
   }
   .content {
     text-align: left;
@@ -80,22 +81,41 @@ export const Container = styled.div`
     padding-top: 23px;
     padding-bottom: 18px;
     color: ${({ theme }) => theme.bg};
+
     h3 {
       font-weight: 600;
       font-size: 20px;
       line-height: 24px;
-      margin-bottom: 7px;
+      margin-bottom: 10px;
     }
     p {
-      font-weight: 300;
+      font-weight: 400;
       font-size: 20px;
       line-height: 24px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      opacity: 65%;
     }
-    a {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 24px;
+    .follow {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      a:first-child {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: ${({ theme }) => theme.follow};
+      }
+      svg {
+        cursor: pointer;
+        path {
+          fill: ${({ theme }) => theme.bg};
+        }
+      }
     }
   }
 
